@@ -1,0 +1,24 @@
+/* components/searchbar/searchbar.wxss */
+.searchbar{
+  background-color: #42BD55;
+  padding: 20rpx;
+}
+.search-navigator, .search-inpuut-group{
+  width: 100%;
+  height: 70rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.search-navigator{
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTUyODExOTQyOTU0IiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjcgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE5MTEiIGRhdGEtc3BtLWFuY2hvci1pZD0iYTMxM3guNzc4MTA2OS4wLmkxIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjIwMC41ODU5Mzc1IiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNzIyLjQ4OSA2NDIuODQ0YzQ1LjUxMS02Mi41NzcgNzMuOTU1LTEzNi41MzMgNzMuOTU1LTIxNi4xNzcgMC0yMDQuOC0xNjQuOTc3LTM2OS43NzgtMzY5Ljc3Ny0zNjkuNzc4UzU2Ljg4OSAyMjEuODY3IDU2Ljg4OSA0MjYuNjY3czE2NC45NzggMzY5Ljc3NyAzNjkuNzc4IDM2OS43NzdjNzkuNjQ0IDAgMTUzLjYtMjguNDQ0IDIxNi4xNzctNjguMjY2bDIyMS44NjcgMjIxLjg2NmMyMi43NTYgMjIuNzU2IDU2Ljg4OSAyMi43NTYgNzkuNjQ1IDAgMjIuNzU1LTIyLjc1NSAyMi43NTUtNTYuODg4IDAtNzkuNjQ0TDcyMi40ODkgNjQyLjg0NHogbS0yOTUuODIyIDk2LjcxMmMtMTcwLjY2NyAwLTMxMi44OS0xNDIuMjIzLTMxMi44OS0zMTIuODlTMjU2IDExMy43NzkgNDI2LjY2OCAxMTMuNzc5IDczOS41NTYgMjU2IDczOS41NTYgNDI2LjY2N3MtMTQyLjIyMyAzMTIuODg5LTMxMi44OSAzMTIuODg5IiBmaWxsPSIjNzM3NzdBIiBwLWlkPSIxOTEyIj48L3BhdGg+PC9zdmc+');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 6%;
+}
+.search-input{
+  min-height: 70rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}

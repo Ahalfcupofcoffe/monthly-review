@@ -1,0 +1,18 @@
+<!--pages/list/list.wxml-->
+<!-- 搜索 -->
+<searchbar isnavigator='{{true}}'></searchbar>
+
+<!-- 更多影片列表 -->
+<view class='container'>
+  <itemview
+   class='Whole' 
+   wx:for='{{filmList}}' 
+   wx:key='item.title' 
+   itemView='{{item}}' 
+   titleTextAlign='center' 
+   titleFontSize='24' 
+   starScoreAlign='center'
+   itemUrl='/pages/detail/detail?filmType={{filmType}}&id={{item.id}}'
+   >
+  </itemview>
+</view>

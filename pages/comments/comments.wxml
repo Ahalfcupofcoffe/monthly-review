@@ -1,0 +1,8 @@
+<!--pages/comments/comments.wxml-->
+<shortcomments
+ shortComments='{{shortComments}}'
+ commentsTotal='{{totals}}'
+ iconfont='iconfont'
+ icon-zan='icon-zan'
+ isShowOrHide='{{false}}'>
+</shortcomments>

@@ -1,0 +1,29 @@
+/* components/indexmodule/indexmodule.wxss */
+.module-group{
+  padding: 40rpx;
+  background-color: #fff;
+}
+.module-group .module-top{
+  font-size: 36rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.module-top .module-title{
+  color: #494949;
+}
+.module-top .module-more{
+  color: #42BD55;
+}
+.module-group .module-scroll-view{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 400rpx;
+  white-space: nowrap;
+}
+/* 边距处理 */
+.item-view{
+  margin-right: 20rpx;
+}
+.item-view:last-child{
+  margin-right: 0;
+}

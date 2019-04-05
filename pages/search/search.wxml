@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索 -->
+<searchbar bindsearch='searchEvent'></searchbar>
+
+<!-- 点击跳转只需要Id和Type -->
+<!-- 搜索的内容 -->
+<view class='search'>
+  <navigator
+   class='item-search' 
+   wx:for='{{searchRes}}'
+   wx:key='{{item.id}}'
+   url='/pages/detail/detail?id={{item.id}}&type={{item.type}}'>
+    <view class='detail-left'>
+      <image
+       src='{{item.pic.normal}}'>
+      </image>
+    </view>
+    <view class='detail-right'>
+      <view class='title'>{{item.title}}</view>
+      <view class='stars'>
+        <stars score='{{item.rating.value}}'></stars>
+      </view>
+      <view class='detail'>{{item.card_subtitle}}</view>
+    </view>
+  </navigator>
+</view>

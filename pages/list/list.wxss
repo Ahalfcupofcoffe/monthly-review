@@ -1,0 +1,10 @@
+/* pages/list/list.wxss */
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 40rpx;
+}
+.container .Whole{
+  margin-bottom: 40rpx;
+}

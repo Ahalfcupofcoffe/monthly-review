@@ -1,0 +1,140 @@
+<!--pages/detail/detail.wxml-->
+<!-- 影片、书、音乐详情头部 -->
+<view class='item-header'>
+  <view class='item-detail'>
+    <view class='detail-left'>
+      <image
+       src='{{detailData.images.small || detailData.cover.normal.url}}'
+       mode='widthFix'>
+      </image>
+    </view>
+    <view class='detail-right'>
+      <view class='item-title'>
+        <view class='title'>
+          {{detailData.title}}{{detailData.year}}
+        </view>
+        <view class='original_title'>
+          {{detailData.original_title}}{{detailData.year}}
+        </view>
+      </view>
+      <view class='item-sub-detail'>
+        <view
+         wx:if='{{isChange.type === "film"}}' 
+         class='item-introduce'>
+          {{detailData.genres}} / {{detailData.countries[0]}} / {{detailData.pubdates}}上映 / 片长{{detailData.durations[0]}}
+        </view>
+        <view
+         wx:elif='{{isChange.type === "book"}}' 
+         class='item-introduce'>
+          {{detailData.author[0]}} / {{detailData.publisher}} / 出版时间：{{detailData.pubdate}}
+        </view>
+        <view
+         wx:elif='{{isChange.type === "music"}}' 
+         class='item-introduce'>
+          {{detailData.songMsg[0]}}：{{detailData.songMsg[1]}} / {{detailData.songMsg[2]}}：{{detailData.songMsg[3]}}
+        </view>
+      </view>
+      <view class='item-record'>
+        <button
+         class='record'
+         size='mini'
+         bindtap='onbuttonEvent'
+         data-name='think'
+         >
+         <icon class='icon iconfont .icon-attend'></icon>
+         {{isChange.btnText[0]}}
+        </button>
+        <button
+         class='record'
+         size='mini'
+         bindtap='onbuttonEvent'
+         data-name='stay'
+         >
+         <icon class='icon iconfont .icon-yuandian'></icon>
+         {{isChange.btnText[1]}}
+        </button>
+        <button
+         class='record'
+         size='mini'
+         bindtap='onbuttonEvent'
+         data-name='too'
+         >
+         <icon class='icon iconfont .icon-xingxingkong'></icon>
+         {{isChange.btnText[2]}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 影片、书、音乐详情标签 -->
+<view class='item-tags'>
+  <view class='item-tags-title'>
+    <text>豆瓣成员常用标签</text>
+  </view>
+  <view wx:if='{{isChange.type === "film"}}' class='item-tags-list'>
+    <text wx:for='{{detailData.tags}}' wx:key='*this'>{{item}}</text>
+  </view>
+  <view wx:else class='item-tags-list'>
+    <text wx:for='{{detailData.tags}}' wx:key='{{detailData.id}}'>{{item.name}}</text>
+  </view>
+</view>
+
+<!-- 影片、书、音乐详情简介 -->
+<view
+ wx:if='{{!(isChange.type === "music" && detailData.desc === "")}}'   
+ class='film-synopsis'>
+  <view class='synopsis-title'>
+    <text>简介</text>
+  </view>
+  <view
+   class='synopsis-detailed {{isFolded?"change-text":""}}'
+   id='synopsis-detailed'>
+    <text
+     id='summary' 
+     wx:if='{{isChange.type !== "music"}}'
+     >{{detailData.summary}}
+    </text>
+    <text id='summary' wx:else>{{detailData.desc}}</text>
+  </view>
+  <view bindtap="change" class="state">
+    <text wx:if='{{isShow}}'>{{isFolded?'展开':'收起'}}</text>       
+  </view>  
+</view>
+
+<!-- 影片、书、音乐详情影人 -->
+<view
+ class='item-filmmaker' 
+ wx:if='{{isChange.type === "film"}}'>
+  <view class='filmmaker-title'>
+    <text>影人</text>
+  </view>
+  <view class='filmmaker-main'>
+    <scroll-view class='filmmaker-scroll-view' scroll-x='true'>
+      <view
+       class='filmmaker-detailed' 
+       wx:for='{{detailData.filmmakerMsg}}'
+       wx:key='{{item.id}}'
+       >
+        <view class='fillmaker-img'>
+          <image src='{{item.avatars.small}}'></image>
+        </view>
+        <view class='filmaker-name'>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='filmaker-position'>
+          <text>{{item.duty}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 影片、书、音乐详情评论 -->
+<shortcomments
+ shortComments='{{shortComments}}'
+ commentsTotal='{{totals}}'
+ iconfont='iconfont'
+ icon-zan='icon-zan'>
+</shortcomments>
+

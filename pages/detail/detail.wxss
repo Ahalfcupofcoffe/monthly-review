@@ -1,0 +1,163 @@
+/* pages/detail/detail.wxss */
+page{
+  background-color: #F4F5F9
+}
+/* 影片、书、音乐详情头部样式 */
+.item-header{
+  padding: 40rpx 30rpx;
+}
+.item-header .item-detail{
+  display: flex;
+  justify-content: space-around;
+}
+.item-detail .detail-left{
+  width: 230rpx;
+  margin-right: 20rpx;
+}
+.detail-left image{
+  width: 100%;
+  border-radius: 6rpx;
+}
+.detail-right .item-title{
+  display: flex;
+  flex-direction: column;
+}
+.item-title .title{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #191919;
+}
+.item-title .original-title{
+  font-size: 32rpx;
+  color: #818181;
+}
+.detail-right .item-sub-detail{
+  margin-top: 30rpx;
+}
+.item-sub-detail .item-introduce{
+  font-size: 22rpx;
+  color: #818181;
+}
+.detail-right .item-record{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.item-record .record{
+  flex: 1;
+  box-shadow: 0 4rpx 10rpx #DBDCE0;
+  padding: 0;
+  border: none;
+  font-size: 26rpx;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  margin-right: 15rpx;
+  color: #191919;
+}
+.item-record .record:hover{
+  color: rgba(0,0,0,1);
+}
+.record .icon{
+  font-size: 28rpx;
+  color: #FEAB2B;
+}
+
+/* 标签/简介/影人标题 */
+.synopsis-title text, .filmmaker-title text, .item-tags-title text{
+  font-size: 34rpx;
+  color: #191919;
+  font-weight: bolder;
+}
+
+/* 影片、书、音乐详情标签样式 */
+.item-tags{
+  margin: 0 30rpx;
+  padding: 20rpx 20rpx;
+  background-color: #ffffff;
+}
+.item-tags .item-tags-list{
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.item-tags-list text{
+  padding: 10rpx 20rpx;
+  background-color: #f5f5f5;
+  font-size: 28rpx;
+  color: #353535;
+  text-align: center;
+  border-radius: 40rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+}
+
+/* 影片、书、音乐详情简介样式 */
+.film-synopsis{
+  padding: 40rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.film-synopsis .synopsis-detailed{
+  margin-top: 20rpx;
+}
+.film-synopsis .change-text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp:4;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.synopsis-detailed text{
+  font-size: 30rpx;
+  color: #191919;
+}
+.film-synopsis .state{
+  text-align: right;
+}
+.state text{
+  font-size: 30rpx;
+  color: #C0C0C0;
+}
+
+/* 影片详情影人样式 */
+.item-filmmaker{
+  padding: 0 30rpx 40rpx;
+}
+.item-filmmaker .filmmaker-main{
+  margin-top: 20rpx;
+  width: 100%;
+}
+.filmmaker-main .filmmaker-scroll-view{
+  white-space: nowrap;
+}
+.filmmaker-scroll-view .filmmaker-detailed{
+  display: inline-block;
+  margin-right: 30rpx;
+}
+.filmmaker-scroll-view .filmmaker-detailed:last-child{
+  margin-right: 0;
+}
+.filmmaker-detailed .fillmaker-img{
+  width: 170rpx;
+  height: 220rpx;
+}
+.fillmaker-img>image{
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx;
+  box-shadow: 0 4rpx 10rpx #DBDCE0;
+}
+.filmaker-name{
+  width: 170rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.filmaker-name>text{
+  font-size: 32rpx;
+  color: #191919;
+}
+.filmaker-position>text{
+  font-size: 28rpx;
+  color: #818181;
+}

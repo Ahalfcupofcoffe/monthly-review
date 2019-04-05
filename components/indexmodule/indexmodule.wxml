@@ -1,0 +1,17 @@
+<!--components/indexmodule/indexmodule.wxml-->
+<view class='module-group'>
+  <view class='module-top'>
+    <view class='module-title'>{{title}}</view>
+    <navigator class='module-more' url='{{moreUrl}}'>更多</navigator>
+  </view>
+  <scroll-view class='module-scroll-view' scroll-x='true'>
+    <itemview
+     class='item-view' 
+     wx:for='{{tvs}}' 
+     wx:key='item.title' 
+     itemView='{{item}}'
+     itemUrl='/pages/detail/detail?filmType={{filmType}}&id={{item.id}}'
+     >
+    </itemview>
+  </scroll-view>
+</view>

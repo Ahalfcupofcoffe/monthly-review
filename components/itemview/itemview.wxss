@@ -1,0 +1,23 @@
+/* components/itemview/itemview.wxss */
+.item-navigator{
+  width: 200rpx;
+  display: inline-block;
+}
+.item-navigator .item-group{
+  width: 100%;
+}
+.item-group .thumbnail-group{
+  width: 100%;
+  height: 284rpx;
+}
+.thumbnail-group .thumbnail{
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx;
+}
+.item-group .item-title{
+  margin-top: 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

@@ -1,0 +1,10 @@
+<!--components/itemview/itemview.wxml-->
+<navigator class='item-navigator' url='{{itemUrl}}'>
+  <view class='item-group'>
+    <view class='thumbnail-group'>
+      <image class='thumbnail' src='{{itemView.cover.url}}'></image>
+    </view>
+    <view class='item-title' style='text-align: {{titleTextAlign}}; font-size: {{titleFontSize}}rpx'>{{itemView.title}}</view>
+    <stars starScoreAlign='{{starScoreAlign}}' score='{{itemView.rating.value}}'></stars>
+  </view>
+</navigator>

@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/comments/comments",
+    "pages/evaluate/evaluate"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#42BD55",
+    "navigationBarTextStyle":"white"
+  }
+}

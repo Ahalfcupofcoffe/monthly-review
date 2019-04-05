@@ -1,0 +1,20 @@
+/* components/stars/stars.wxss */
+.rate-group{
+  margin-top: 6rpx;
+  font-size: 20rpx;
+  color: #818181;
+}
+.rate-group image{
+  width: 22rpx;
+  height: 22rpx;
+  margin-left: 6rpx;
+}
+.rate-group image:first-of-type{
+  margin-left: 0;
+}
+.rate-group image:last-of-type{
+  margin-right: 10rpx;
+}
+.rate-group text{
+  margin-top: 2rpx;
+}

@@ -1,0 +1,30 @@
+/* pages/search/search.wxss */
+.search{
+  margin: 0 30rpx;
+}
+.search .item-search{
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #F2F2F2;
+}
+.item-search .detail-left{
+  margin-right: 30rpx;
+}
+.detail-left>image{
+  width: 120rpx;
+  height: 165rpx;
+  border-radius: 6rpx;
+  border: 1px solid #F2F2F2;
+}
+.detail-right .title{
+  font-size: 31rpx;
+  color: #191919;
+  margin-bottom: 10rpx;
+}
+.detail-right .stars{
+  margin-bottom: 10rpx;
+}
+.detail-right .detail{
+  font-size: 24rpx;
+  color: #818181;
+}

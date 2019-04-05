@@ -1,0 +1,46 @@
+<!-- components/shortcomments/shortcomments.wxml -->
+<!-- 影片、书、音乐详情评论 -->
+<view class='comment-list-group'>
+  <view class='comment-header'>
+    <view class='header-left'>
+      <text class='shortCom'>短评</text>
+      <text class='comTotal' wx:if='{{!isShowOrHide}}'>{{commentsTotal}}条</text>
+    </view>
+    <navigator class='header-right' wx:if='{{isShowOrHide}}' url='/pages/comments/comments'>全部 {{commentsTotal}} ></navigator>
+  </view>
+  <view class='comment-group' wx:for='{{shortComments}}' wx:key='{{item.id}}'>
+    <view class='top-comment'>
+      <view class='header-left'>
+        <image class='portrait' src='{{item.author.avatar || item.user.avatar}}'></image>
+      </view>
+      <view class='header-right'>
+        <view class='comment-username'>
+          <text class='username'>{{item.author.name || item.user.name}}</text>
+        </view>
+        <view class='comment-score'>
+          <stars score='{{item.rating.value * 2}}' starSize='22' isText='{{false}}'></stars>
+          <text class='time'>{{item.create_time}}</text>
+        </view>
+      </view>  
+    </view> 
+    <view class='bottom-comment'>
+      <view
+       class='comment-content {{isCommentsTextChange[index] === true ? "" : "change-text"}}' 
+       bindtap='clickIsShow' 
+       data-index='{{index}}'>
+        <text class='content'>{{item.content || item.comment}}</text>
+      </view>
+      <view class='praise'>
+        <icon class='icon iconfont icon-zan'></icon>
+        <text>{{item.useful_count || item.vote_count}}</text>
+      </view>
+    </view>
+  </view>
+  <navigator
+   wx:if='{{isShowOrHide}}' 
+   class='comment-more'  
+   url='/pages/comments/comments'>
+    <text class='whole-comment'>查看全部短评</text>
+    <text>></text>
+  </navigator>
+</view>

@@ -1,0 +1,31 @@
+<!--components/stars/stars.wxml-->
+<view class='rate-group' style='text-align: {{starScoreAlign}}'>
+  <block wx:if='{{scoreText !== "暂未评分"}}'>
+    <image 
+      wx:for='{{wholesArr}}' 
+      wx:key='*this' 
+      style='width: {{starSize}}rpx; height: {{starSize}}rpx;'
+      src='/images/stars_whole.png'
+      >
+    </image>
+    <image
+     wx:for='{{halfsArr}}' 
+     wx:key='*this'
+     style='width: {{starSize}}rpx; height: {{starSize}}rpx;' 
+     src='/images/stars_half.png'
+     >
+    </image>
+    <image 
+      wx:for='{{emptysArr}}' 
+      wx:key='*this' 
+      style='width: {{starSize}}rpx; height: {{starSize}}rpx;'
+      src='/images/stars_empty.png'
+      >
+    </image>
+  </block>
+  <text
+    wx:if='{{isText}}' 
+    style='font-size: {{scoreFontSize}}rpx; color: {{scoreFontColor}}
+    >{{scoreText}}
+  </text>
+</view>

@@ -1,0 +1,88 @@
+/* components/shortcomments/shortcomments.wxss */
+/* 影片、书、音乐详情评论样式 */
+.comment-list-group{
+  margin: 0 30rpx;
+  background-color: #ffffff;
+  padding: 40rpx 30rpx 35rpx;
+}
+.comment-list-group .comment-header{
+  display: flex;
+  justify-content: space-between;
+}
+.header-left .shortCom{
+  font-size: 32rpx;
+  color: #191919;
+  font-weight: bold;
+}
+.header-left .comTotal{
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #818181;
+}
+.comment-header .header-right{
+  font-size: 28rpx;
+  color: #818181;
+}
+.comment-list-group .comment-group{
+  margin: 30rpx 0;
+  border-bottom: 1px solid #F2F2F2;
+}
+.comment-group .top-comment{
+  display: flex;
+}
+.top-comment .header-left{
+  margin-right: 10rpx;
+}
+.header-left .portrait{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.comment-username .username{
+  font-size: 32rpx;
+  color: #191919;
+  font-weight: bold;
+}
+.header-right .comment-score{
+  display: flex;
+}
+.comment-score .time{
+  font-size: 24rpx;
+  color: #C0C0C0
+}
+.comment-group .bottom-comment{
+  margin-top: 10rpx;
+}
+.bottom-comment .change-text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.comment-content .content{
+  font-size: 28rpx;
+  color: #191919;  
+}
+.bottom-comment .praise{
+  color: #9A9A9A;
+  margin-bottom: 20rpx;
+}
+.praise .icon{
+  font-size: 32rpx;
+}
+.praise>text{
+  font-size: 24rpx;
+}
+.comment-list-group .comment-more{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-more .whole-comment{
+  font-size: 28rpx;
+  color: #191919;
+}
+.comment-more>text{
+  font-size: 24rpx;
+  color: #818181;
+}

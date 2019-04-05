@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<!-- 搜索 -->
+<searchbar isnavigator='{{true}}'></searchbar>
+
+<!-- 电影 -->
+<indexmodule
+ wx:for='{{shadowList}}'
+ wx:key='{{item.subject_collection.name}}'
+ title='{{item.subject_collection.name}}' 
+ tvs='{{item.subject_collection_items}}' 
+ moreUrl='/pages/list/list?type={{item.subject_collection.id}}&film={{item.subject_collection.name}}'
+ filmType='{{item.subject_collection.id}}'
+ >
+</indexmodule>
